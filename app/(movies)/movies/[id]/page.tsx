@@ -20,7 +20,6 @@ export default async function MovieDetail({ params: { id } }: IParams) {
       <Suspense fallback={<h1>Loading movie info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
-      <Link href={`${id}/credits`}>CREDITS</Link>
       <Suspense fallback={<h1>Loading movie videos</h1>}>
         <MovieVideos id={id} />
       </Suspense>

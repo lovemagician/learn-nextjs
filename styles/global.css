@@ -126,6 +126,17 @@ table {
 
 /* css */
 
+/* styles/globals.css */
+html {
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer, Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, O   
+pera */
+  }
+}
+
 body {
   padding-top: 150px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

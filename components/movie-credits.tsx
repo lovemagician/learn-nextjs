@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { API_URL } from "../app/(home)/page";
+import styles from "../styles/movie-credits.module.css";
 
 async function getCredits(id: string) {
   const response = await fetch(`${API_URL}/${id}/credits`);
@@ -9,14 +11,19 @@ export default async function Credits({ id }: { id: string }) {
   const credits = await getCredits(id);
   return (
     <div>
-      <p>CREDITS</p>
-      {credits.map((credit) => (
-        <div>
-          <p key={credit.id}>{credit.name}</p>
-          <img key={credit.id} src={credit.profile_path} />
-          <span key={credit.id}>{credit.character}</span>
-        </div>
-      ))}
+      <div className={styles.credits_nav}>
+        <Link href="./">&larr;BACK</Link>
+        <p>CREDITS</p>
+      </div>
+      <div className={styles.container}>
+        {credits.map((credit) => (
+          <div>
+            <p>{credit.name}</p>
+            <img src={credit.profile_path} />
+            <span>{credit.character}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
