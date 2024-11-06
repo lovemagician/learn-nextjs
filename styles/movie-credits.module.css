@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -33,12 +34,18 @@
 }
 
 .container p {
-  font-size: 12px;
-  text-align: center;
+  font-size: 14px;
+  /* text-align: center; */
 }
 
 .container img {
+  display: flex;
   border-radius: 12px;
   height: 200px;
   margin: 5px 0;
+}
+
+.container span {
+  display: block;
+  font-size: 12px;
 }
